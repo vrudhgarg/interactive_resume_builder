@@ -1,0 +1,6 @@
+langchain>=0.1.0
+openai>=1.0.0
+streamlit>=1.22.0
+chromadb>=0.4.15
+sentence-transformers>=2.2.2
+PyMuPDF>=1.21.1
