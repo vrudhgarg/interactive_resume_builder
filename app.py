@@ -4,16 +4,16 @@ import streamlit as st
 from qa_pipeline import get_qa_chain
 
 # Set up the page
-st.set_page_config(page_title="Lecture RAG", layout="wide")
+st.set_page_config(page_title="Resume RAG", layout="wide")
 
-st.title("📚 Ask your Lecture Notes")
+st.title("📚 Ask your Resume creator")
 
 # User input
-query = st.text_input("Enter your question:")
+query = st.text_input("Enter the job profile:")
 
 # Run only if there's input
 if query:
-    with st.spinner("Searching your notes..."):
+    with st.spinner("Searching your resumes..."):
         qa_chain = get_qa_chain()
         response = qa_chain.invoke({"query": query})
         answer = response["result"]
